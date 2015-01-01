@@ -38,6 +38,10 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
         let cell = tableView.dequeueReusableCellWithIdentifier("cellID") as UITableViewCell
         if let trainingExercise: TrainingExercise = training?.exercises[indexPath.row] as TrainingExercise! {
             cell.textLabel?.text = trainingExercise.exercise.name
+            
+            if let image: String = trainingExercise.exercise.category.image as String! {
+                cell.imageView?.image = UIImage(named: image)
+            }
         }
         return cell
     }
