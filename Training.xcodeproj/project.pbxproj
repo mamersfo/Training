@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1238401A51AD9F0003D383 /* TrainingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12383F1A51AD9F0003D383 /* TrainingListController.swift */; };
+		3A1238421A5288F00003D383 /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1238411A5288F00003D383 /* ExerciseController.swift */; };
+		3A1238661A5351CB0003D383 /* Exercise+Crud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1238631A5351CB0003D383 /* Exercise+Crud.swift */; };
+		3A1238671A5351CB0003D383 /* Training+Crud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1238641A5351CB0003D383 /* Training+Crud.swift */; };
+		3A1238681A5351CB0003D383 /* TrainingExercise+Crud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1238651A5351CB0003D383 /* TrainingExercise+Crud.swift */; };
+		3A12386A1A5351D70003D383 /* TrainingExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1238691A5351D70003D383 /* TrainingExercise.swift */; };
+		3A12386C1A5353230003D383 /* Exercises.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3A12386B1A53530A0003D383 /* Exercises.sqlite */; };
+		3A1238761A53DBD10003D383 /* ExerciseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1238751A53DBD10003D383 /* ExerciseListController.swift */; };
 		3A2FECAF1A4EBFD1003F9533 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FECAE1A4EBFD1003F9533 /* AppDelegate.swift */; };
-		3A2FECB21A4EBFD1003F9533 /* Training.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FECB01A4EBFD1003F9533 /* Training.xcdatamodeld */; };
-		3A2FECB41A4EBFD1003F9533 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FECB31A4EBFD1003F9533 /* ViewController.swift */; };
 		3A2FECB71A4EBFD1003F9533 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2FECB51A4EBFD1003F9533 /* Main.storyboard */; };
 		3A2FECB91A4EBFD1003F9533 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2FECB81A4EBFD1003F9533 /* Images.xcassets */; };
-		3A2FECBC1A4EBFD1003F9533 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2FECBA1A4EBFD1003F9533 /* LaunchScreen.xib */; };
 		3A2FECC81A4EBFD1003F9533 /* TrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FECC71A4EBFD1003F9533 /* TrainingTests.swift */; };
+		3A68271B1A501071006E3BFB /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A6827191A501071006E3BFB /* TableCell.xib */; };
+		3ADF0A911A507149007B5C32 /* TrainingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF0A901A507149007B5C32 /* TrainingController.swift */; };
+		3ADF0A951A5071CF007B5C32 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF0A941A5071CF007B5C32 /* BaseController.swift */; };
+		3ADF0AA91A5160C7007B5C32 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF0AA51A5160C7007B5C32 /* Exercise.swift */; };
+		3ADF0AAA1A5160C7007B5C32 /* Exercises.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF0AA61A5160C7007B5C32 /* Exercises.xcdatamodeld */; };
+		3ADF0AAB1A5160C7007B5C32 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF0AA81A5160C7007B5C32 /* Training.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +38,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A12383F1A51AD9F0003D383 /* TrainingListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingListController.swift; sourceTree = "<group>"; };
+		3A1238411A5288F00003D383 /* ExerciseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
+		3A1238631A5351CB0003D383 /* Exercise+Crud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Exercise+Crud.swift"; path = "../../../swift/loadexercises/loadexercises/Exercise+Crud.swift"; sourceTree = "<group>"; };
+		3A1238641A5351CB0003D383 /* Training+Crud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Training+Crud.swift"; path = "../../../swift/loadexercises/loadexercises/Training+Crud.swift"; sourceTree = "<group>"; };
+		3A1238651A5351CB0003D383 /* TrainingExercise+Crud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TrainingExercise+Crud.swift"; path = "../../../swift/loadexercises/loadexercises/TrainingExercise+Crud.swift"; sourceTree = "<group>"; };
+		3A1238691A5351D70003D383 /* TrainingExercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainingExercise.swift; path = ../../../swift/loadexercises/loadexercises/TrainingExercise.swift; sourceTree = "<group>"; };
+		3A12386B1A53530A0003D383 /* Exercises.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Exercises.sqlite; sourceTree = "<group>"; };
+		3A1238751A53DBD10003D383 /* ExerciseListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseListController.swift; sourceTree = "<group>"; };
 		3A2FECA91A4EBFD1003F9533 /* Training.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Training.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2FECAD1A4EBFD1003F9533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A2FECAE1A4EBFD1003F9533 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A2FECB11A4EBFD1003F9533 /* Training.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Training.xcdatamodel; sourceTree = "<group>"; };
-		3A2FECB31A4EBFD1003F9533 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A2FECB61A4EBFD1003F9533 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A2FECB81A4EBFD1003F9533 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3A2FECBB1A4EBFD1003F9533 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3A2FECC11A4EBFD1003F9533 /* TrainingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2FECC61A4EBFD1003F9533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A2FECC71A4EBFD1003F9533 /* TrainingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTests.swift; sourceTree = "<group>"; };
+		3A68271A1A501071006E3BFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TableCell.xib; sourceTree = "<group>"; };
+		3ADF0A901A507149007B5C32 /* TrainingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingController.swift; sourceTree = "<group>"; };
+		3ADF0A941A5071CF007B5C32 /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		3ADF0AA51A5160C7007B5C32 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = ../../../swift/loadexercises/loadexercises/Exercise.swift; sourceTree = "<group>"; };
+		3ADF0AA71A5160C7007B5C32 /* loadexercises.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = loadexercises.xcdatamodel; sourceTree = "<group>"; };
+		3ADF0AA81A5160C7007B5C32 /* Training.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Training.swift; path = ../../../swift/loadexercises/loadexercises/Training.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +101,22 @@
 		3A2FECAB1A4EBFD1003F9533 /* Training */ = {
 			isa = PBXGroup;
 			children = (
+				3A12386B1A53530A0003D383 /* Exercises.sqlite */,
+				3ADF0AA61A5160C7007B5C32 /* Exercises.xcdatamodeld */,
+				3ADF0AA51A5160C7007B5C32 /* Exercise.swift */,
+				3A1238631A5351CB0003D383 /* Exercise+Crud.swift */,
+				3A1238411A5288F00003D383 /* ExerciseController.swift */,
+				3A1238751A53DBD10003D383 /* ExerciseListController.swift */,
+				3ADF0AA81A5160C7007B5C32 /* Training.swift */,
+				3A1238641A5351CB0003D383 /* Training+Crud.swift */,
+				3A1238691A5351D70003D383 /* TrainingExercise.swift */,
+				3A1238651A5351CB0003D383 /* TrainingExercise+Crud.swift */,
+				3ADF0A901A507149007B5C32 /* TrainingController.swift */,
+				3A12383F1A51AD9F0003D383 /* TrainingListController.swift */,
 				3A2FECAE1A4EBFD1003F9533 /* AppDelegate.swift */,
-				3A2FECB31A4EBFD1003F9533 /* ViewController.swift */,
+				3ADF0A941A5071CF007B5C32 /* BaseController.swift */,
 				3A2FECB51A4EBFD1003F9533 /* Main.storyboard */,
 				3A2FECB81A4EBFD1003F9533 /* Images.xcassets */,
-				3A2FECBA1A4EBFD1003F9533 /* LaunchScreen.xib */,
-				3A2FECB01A4EBFD1003F9533 /* Training.xcdatamodeld */,
 				3A2FECAC1A4EBFD1003F9533 /* Supporting Files */,
 			);
 			path = Training;
@@ -93,6 +125,7 @@
 		3A2FECAC1A4EBFD1003F9533 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3A6827191A501071006E3BFB /* TableCell.xib */,
 				3A2FECAD1A4EBFD1003F9533 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -195,8 +228,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A12386C1A5353230003D383 /* Exercises.sqlite in Resources */,
 				3A2FECB71A4EBFD1003F9533 /* Main.storyboard in Resources */,
-				3A2FECBC1A4EBFD1003F9533 /* LaunchScreen.xib in Resources */,
+				3A68271B1A501071006E3BFB /* TableCell.xib in Resources */,
 				3A2FECB91A4EBFD1003F9533 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,9 +249,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A2FECB41A4EBFD1003F9533 /* ViewController.swift in Sources */,
+				3ADF0A951A5071CF007B5C32 /* BaseController.swift in Sources */,
+				3ADF0A911A507149007B5C32 /* TrainingController.swift in Sources */,
+				3A1238671A5351CB0003D383 /* Training+Crud.swift in Sources */,
+				3A1238681A5351CB0003D383 /* TrainingExercise+Crud.swift in Sources */,
+				3A1238661A5351CB0003D383 /* Exercise+Crud.swift in Sources */,
+				3ADF0AAA1A5160C7007B5C32 /* Exercises.xcdatamodeld in Sources */,
+				3ADF0AAB1A5160C7007B5C32 /* Training.swift in Sources */,
+				3A1238401A51AD9F0003D383 /* TrainingListController.swift in Sources */,
+				3A1238761A53DBD10003D383 /* ExerciseListController.swift in Sources */,
+				3A1238421A5288F00003D383 /* ExerciseController.swift in Sources */,
+				3A12386A1A5351D70003D383 /* TrainingExercise.swift in Sources */,
 				3A2FECAF1A4EBFD1003F9533 /* AppDelegate.swift in Sources */,
-				3A2FECB21A4EBFD1003F9533 /* Training.xcdatamodeld in Sources */,
+				3ADF0AA91A5160C7007B5C32 /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,12 +292,12 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		3A2FECBA1A4EBFD1003F9533 /* LaunchScreen.xib */ = {
+		3A6827191A501071006E3BFB /* TableCell.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3A2FECBB1A4EBFD1003F9533 /* Base */,
+				3A68271A1A501071006E3BFB /* Base */,
 			);
-			name = LaunchScreen.xib;
+			name = TableCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -342,6 +386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Training/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -352,6 +397,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Training/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -409,6 +455,7 @@
 				3A2FECCD1A4EBFD1003F9533 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A2FECCE1A4EBFD1003F9533 /* Build configuration list for PBXNativeTarget "TrainingTests" */ = {
 			isa = XCConfigurationList;
@@ -417,17 +464,19 @@
 				3A2FECD01A4EBFD1003F9533 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3A2FECB01A4EBFD1003F9533 /* Training.xcdatamodeld */ = {
+		3ADF0AA61A5160C7007B5C32 /* Exercises.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3A2FECB11A4EBFD1003F9533 /* Training.xcdatamodel */,
+				3ADF0AA71A5160C7007B5C32 /* loadexercises.xcdatamodel */,
 			);
-			currentVersion = 3A2FECB11A4EBFD1003F9533 /* Training.xcdatamodel */;
-			path = Training.xcdatamodeld;
+			currentVersion = 3ADF0AA71A5160C7007B5C32 /* loadexercises.xcdatamodel */;
+			name = Exercises.xcdatamodeld;
+			path = ../../../swift/loadexercises/loadexercises/Exercises.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

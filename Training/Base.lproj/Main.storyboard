@@ -1,25 +1,105 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="z1U-cY-bzE">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Training List-->
+        <scene sceneID="m4p-zM-KZi">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tableViewController storyboardIdentifier="TrainingListController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F9g-xz-HbB" customClass="TrainingListController" customModule="Training" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qtV-gN-Ooc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="F9g-xz-HbB" id="eba-hi-jfD"/>
+                            <outlet property="delegate" destination="F9g-xz-HbB" id="FwB-My-yVU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Training List" id="Rva-AP-1an">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="4VL-W0-MWZ"/>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="Afa-rh-s8g">
+                            <connections>
+                                <action selector="add:" destination="F9g-xz-HbB" id="IC3-iI-lPQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JdF-3P-fMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-360" y="279"/>
+        </scene>
+        <!--Training Controller-->
+        <scene sceneID="eOq-64-AAT">
+            <objects>
+                <tableViewController storyboardIdentifier="TrainingController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XvI-wh-70v" customClass="TrainingController" customModule="Training" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mpZ-DL-sKs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="XvI-wh-70v" id="T4e-iP-pm4"/>
+                            <outlet property="delegate" destination="XvI-wh-70v" id="KT3-nM-aAn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="jXf-WO-1vp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mnu-JR-Fxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xXH-Y7-LBb">
+            <objects>
+                <navigationController storyboardIdentifier="RootNavController" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z1U-cY-bzE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lLt-aj-A7O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="F9g-xz-HbB" kind="relationship" relationship="rootViewController" id="yXp-HA-cKM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T0e-2f-HND" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-762" y="279"/>
+        </scene>
+        <!--ExerciseController-->
+        <scene sceneID="6gB-1S-ni3">
+            <objects>
+                <viewController storyboardIdentifier="ExerciseController" title="ExerciseController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nL6-fN-SaB" customClass="ExerciseController" customModule="Training" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eDX-P9-Lip"/>
+                        <viewControllerLayoutGuide type="bottom" id="oRE-dd-PpX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zW2-q0-VdP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descriptive text" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KS9-8N-Fj4">
+                                <rect key="frame" x="16" y="72" width="288" height="73"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Navigation Item" id="ohs-4a-Y1x"/>
+                    <connections>
+                        <outlet property="textLabel" destination="KS9-8N-Fj4" id="EA4-sV-KM7"/>
+                        <outlet property="view" destination="zW2-q0-VdP" id="xrq-74-ZkT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u84-8t-f7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="279"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
