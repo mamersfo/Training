@@ -4,12 +4,20 @@ class ExerciseController: UIViewController {
     
     var exercise: Exercise? = nil
     
+    @IBOutlet weak var categoryImage: UIImageView!
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.title = exercise?.name
-        textLabel.text = exercise?.text        
+        if let image: String = exercise?.category.image as String! {
+            categoryImage.image = UIImage(named: image)
+        }
+        categoryLabel.text = "Categorie: \(exercise!.category.name)"
+        textLabel.text = exercise?.text
+        textLabel.sizeToFit()
     }
     
     class func forExercise(exercise: Exercise) -> ExerciseController {

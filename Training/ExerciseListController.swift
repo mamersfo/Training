@@ -16,7 +16,13 @@ class ExerciseListController: UITableViewController, UITableViewDataSource {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
         let exercise = exercises[indexPath.row]
+        
         cell.textLabel?.text = exercise.name
+        
+        if let image: String = exercise.category.image as String! {
+            cell.imageView?.image = UIImage(named: image)
+        }
+        
         return cell
     }
 }

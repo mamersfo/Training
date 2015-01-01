@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="z1U-cY-bzE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Training List-->
@@ -77,19 +78,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descriptive text" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KS9-8N-Fj4">
-                                <rect key="frame" x="16" y="72" width="288" height="73"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyh-ob-cTL">
+                                <rect key="frame" x="16" y="120" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kzn-wb-ak3">
+                                <rect key="frame" x="140" y="72" width="40" height="40"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" misplaced="YES" text="Text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RZ-bv-Y5B">
+                                <rect key="frame" x="16" y="159" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="5vP-XD-rk7"/>
+                                    <constraint firstAttribute="height" priority="500" constant="21" id="iOT-nI-Pcs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6RZ-bv-Y5B" firstAttribute="top" secondItem="kyh-ob-cTL" secondAttribute="bottom" constant="18" id="4y0-Ym-3UX"/>
+                            <constraint firstItem="6RZ-bv-Y5B" firstAttribute="leading" secondItem="zW2-q0-VdP" secondAttribute="leadingMargin" id="xaf-yx-6oB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Navigation Item" id="ohs-4a-Y1x"/>
                     <connections>
-                        <outlet property="textLabel" destination="KS9-8N-Fj4" id="EA4-sV-KM7"/>
-                        <outlet property="view" destination="zW2-q0-VdP" id="xrq-74-ZkT"/>
+                        <outlet property="categoryImage" destination="kzn-wb-ak3" id="Z1r-PH-JI1"/>
+                        <outlet property="categoryLabel" destination="kyh-ob-cTL" id="Vp1-25-Y8g"/>
+                        <outlet property="textLabel" destination="6RZ-bv-Y5B" id="gb3-K5-9Kl"/>
+                        <outlet property="view" destination="zW2-q0-VdP" id="Rx2-lz-SQe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u84-8t-f7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
