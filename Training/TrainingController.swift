@@ -42,6 +42,8 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
             if let image: String = trainingExercise.exercise.category.image as String! {
                 cell.imageView?.image = UIImage(named: image)
             }
+            
+            cell.showsReorderControl = true
         }
         return cell
     }
@@ -68,6 +70,16 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
             
             searchController.active = false
         }
+    }
+    
+    override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+
+        training!.willChangeValueForKey("exercises")
+        let set = training!.mutableOrderedSetValueForKey("exercises")
+        set.moveObjectsAtIndexes(NSIndexSet(index: sourceIndexPath.item), toIndex: destinationIndexPath.item)
+        training!.didChangeValueForKey("exercises")
+        
+        managedObjectContext!.save(nil)
     }
     
     class func forTraining(training: Training) -> TrainingController {
@@ -130,6 +142,17 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
             let controller = searchController.searchResultsController as ExerciseListController
             controller.exercises = fetchResults
             controller.tableView.reloadData()
+        }
+    }
+    
+    @IBAction func edit(sender: AnyObject) {
+        if tableView.editing {
+            tableView.setEditing(false, animated: true)
+            navigationItem.rightBarButtonItem?.title = "Edit"
+        }
+        else {
+            tableView.setEditing(true, animated: true)
+            navigationItem.rightBarButtonItem?.title = "Done"
         }
     }
 }

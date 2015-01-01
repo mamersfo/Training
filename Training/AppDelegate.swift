@@ -39,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("Exercises.sqlite")
-        println("sqlite URL: \(url)")
         
         var error: NSError? = nil
 

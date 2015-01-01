@@ -21,16 +21,5 @@ class BaseController: UITableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    @IBAction func edit(sender: AnyObject) {
-        if tableView.editing {
-            tableView.setEditing(false, animated: true)
-            navigationItem.rightBarButtonItem?.title = "Edit"
-        }
-        else {            
-            tableView.setEditing(true, animated: true)
-            navigationItem.rightBarButtonItem?.title = "Done"
-        }
-    }
+    }    
 }
