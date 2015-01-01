@@ -21,7 +21,7 @@ class ExerciseController: UIViewController {
         textLabel.text = exercise?.text
         textLabel.sizeToFit()
         
-        if let vars: String = exercise?.variations as String! {
+        if let vars: String = exercise?.valueForKey("variations") as String! {
             let comps = vars.componentsSeparatedByString(";") as NSArray
             varsLabel.text = "Variaties:\n• " + comps.componentsJoinedByString("\n• ")
         }
