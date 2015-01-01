@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4013B18A-6929-4B9F-BAC6-CEF13C829E8E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Training</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>80940C2AD22C3E8B0A9ED3ED3DF105F749D585CD</key>
+		<string>github.com:mamersfo/Training.git</string>
+		<key>EDB11A8F2CFB6C5722B1CA050B731398C2A93EAD</key>
+		<string>github.com:mamersfo/loadexercises.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Training.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>80940C2AD22C3E8B0A9ED3ED3DF105F749D585CD</key>
+		<string>../..</string>
+		<key>EDB11A8F2CFB6C5722B1CA050B731398C2A93EAD</key>
+		<string>../../../../swift/loadexercises</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:mamersfo/Training.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>80940C2AD22C3E8B0A9ED3ED3DF105F749D585CD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EDB11A8F2CFB6C5722B1CA050B731398C2A93EAD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>loadexercises</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>80940C2AD22C3E8B0A9ED3ED3DF105F749D585CD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Training</string>
+		</dict>
+	</array>
+</dict>
+</plist>
