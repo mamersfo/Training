@@ -121,12 +121,24 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
         
         for searchString in searchItems {
             
-            var lhs = NSExpression(forKeyPath: "name")
+            var lhs1 = NSExpression(forKeyPath: "name")
+            var lhs2 = NSExpression(forKeyPath: "tags")
             var rhs = NSExpression(forConstantValue: searchString)
             
-            var finalPredicate = NSComparisonPredicate(leftExpression: lhs, rightExpression: rhs, modifier: .DirectPredicateModifier, type: .ContainsPredicateOperatorType, options: .CaseInsensitivePredicateOption)
-            
-            andMatchPredicates.append(finalPredicate)
+            andMatchPredicates.append(
+                NSCompoundPredicate.orPredicateWithSubpredicates([
+                    NSComparisonPredicate(
+                        leftExpression: lhs1, rightExpression: rhs,
+                        modifier: .DirectPredicateModifier,
+                        type: .ContainsPredicateOperatorType,
+                        options: .CaseInsensitivePredicateOption),
+                    NSComparisonPredicate(
+                        leftExpression: lhs2, rightExpression: rhs,
+                        modifier: .DirectPredicateModifier,
+                        type: .ContainsPredicateOperatorType,
+                        options: .CaseInsensitivePredicateOption),
+                    ])
+                )
         }
         
         let finalCompoundPredicate = NSCompoundPredicate.andPredicateWithSubpredicates(andMatchPredicates)
