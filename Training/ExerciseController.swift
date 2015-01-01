@@ -7,6 +7,7 @@ class ExerciseController: UIViewController {
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var varsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +17,17 @@ class ExerciseController: UIViewController {
             categoryImage.image = UIImage(named: image)
         }
         categoryLabel.text = "Categorie: \(exercise!.category.name)"
+
         textLabel.text = exercise?.text
         textLabel.sizeToFit()
+        
+        if let vars: String = exercise?.variations as String! {
+            let comps = vars.componentsSeparatedByString(";") as NSArray
+            varsLabel.text = "Variaties:\n• " + comps.componentsJoinedByString("\n• ")
+        }
+        else {
+            varsLabel.text = "Geen variaties."
+        }
     }
     
     class func forExercise(exercise: Exercise) -> ExerciseController {
