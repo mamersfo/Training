@@ -22,7 +22,7 @@
 		<key>80940C2AD22C3E8B0A9ED3ED3DF105F749D585CD</key>
 		<string>../..</string>
 		<key>EDB11A8F2CFB6C5722B1CA050B731398C2A93EAD</key>
-		<string>../../../../swift/loadexercises</string>
+		<string>../../../swift/loadexercises</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:mamersfo/Training.git</string>

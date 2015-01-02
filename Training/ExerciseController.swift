@@ -1,6 +1,6 @@
 import UIKit
 
-class ExerciseController: UIViewController {
+class ExerciseController: ContentController {
     
     var exercise: Exercise? = nil
     
