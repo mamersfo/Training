@@ -1,9 +1,11 @@
 import UIKit
 
-class ExerciseController: ContentController {
+class ExerciseController: UIViewController {
     
     var exercise: Exercise? = nil
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
@@ -39,6 +41,11 @@ class ExerciseController: ContentController {
                     NSAttributedString(string: ", \(comment)", attributes: attrs))
             }
             
+            if let source = variation.valueForKey("source") as? String {
+                mas.appendAttributedString(
+                    NSAttributedString(string: " [\(source)]", attributes: attrs))
+            }
+            
             mas.appendAttributedString(newline)
         }
         
@@ -71,9 +78,19 @@ class ExerciseController: ContentController {
         if let variations = exercise?.variations {
             if  variations.count > 0 {
                 linksView.attributedText = variationsAsText(variations)
-                linksView.sizeToFit()
             }
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
+        let size = CGSizeMake(
+            contentView.bounds.size.width,
+            linksView.center.y + linksView.bounds.height/2)
+        
+        contentView.frame = CGRectMake(0, 0, size.width, size.height)
+        
+        self.scrollView.contentSize = size;
     }
     
     class func forExercise(exercise: Exercise) -> ExerciseController {

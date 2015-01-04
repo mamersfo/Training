@@ -19,15 +19,16 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
 
         searchController.delegate = self
         searchController.hidesNavigationBarDuringPresentation = false
-        searchController.dimsBackgroundDuringPresentation = true
-
+        searchController.dimsBackgroundDuringPresentation = false
+        
         searchController.searchResultsUpdater = self
         searchController.searchBar.sizeToFit()
         searchController.searchBar.delegate = self
         
         tableView.tableHeaderView = searchController.searchBar
         
-        definesPresentationContext = false
+        // prevent content being visible above the search bar
+        definesPresentationContext = true
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -118,27 +119,46 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
         let searchItems = strippedString.componentsSeparatedByString(" ") as [String]
         
         var andMatchPredicates = [NSPredicate]()
-        
+
+        let numberFormatter = NSNumberFormatter()
+        numberFormatter.numberStyle = .NoStyle
+        numberFormatter.formatterBehavior = .BehaviorDefault
+
         for searchString in searchItems {
             
-            var lhs1 = NSExpression(forKeyPath: "name")
-            var lhs2 = NSExpression(forKeyPath: "tags")
-            var rhs = NSExpression(forConstantValue: searchString)
-            
-            andMatchPredicates.append(
-                NSCompoundPredicate.orPredicateWithSubpredicates([
+            let targetNumber = numberFormatter.numberFromString(searchString)
+
+            if targetNumber != nil {
+                let lhs = NSExpression(forKeyPath: "station")
+                let rhs = NSExpression(forConstantValue: targetNumber!)
+                
+                andMatchPredicates.append(
                     NSComparisonPredicate(
-                        leftExpression: lhs1, rightExpression: rhs,
+                        leftExpression: lhs, rightExpression: rhs,
                         modifier: .DirectPredicateModifier,
-                        type: .ContainsPredicateOperatorType,
-                        options: .CaseInsensitivePredicateOption),
-                    NSComparisonPredicate(
-                        leftExpression: lhs2, rightExpression: rhs,
-                        modifier: .DirectPredicateModifier,
-                        type: .ContainsPredicateOperatorType,
-                        options: .CaseInsensitivePredicateOption),
-                    ])
-                )
+                        type: .EqualToPredicateOperatorType,
+                        options: .CaseInsensitivePredicateOption))
+            }
+            else {
+                var lhs1 = NSExpression(forKeyPath: "name")
+                var lhs2 = NSExpression(forKeyPath: "tags")
+                var rhs = NSExpression(forConstantValue: searchString)
+                
+                andMatchPredicates.append(
+                    NSCompoundPredicate.orPredicateWithSubpredicates([
+                        NSComparisonPredicate(
+                            leftExpression: lhs1, rightExpression: rhs,
+                            modifier: .DirectPredicateModifier,
+                            type: .ContainsPredicateOperatorType,
+                            options: .CaseInsensitivePredicateOption),
+                        NSComparisonPredicate(
+                            leftExpression: lhs2, rightExpression: rhs,
+                            modifier: .DirectPredicateModifier,
+                            type: .ContainsPredicateOperatorType,
+                            options: .CaseInsensitivePredicateOption),
+                        ])
+                    )
+            }
         }
         
         let finalCompoundPredicate = NSCompoundPredicate.andPredicateWithSubpredicates(andMatchPredicates)

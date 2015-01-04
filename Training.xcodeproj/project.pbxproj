@@ -19,7 +19,6 @@
 		3A2FECB71A4EBFD1003F9533 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2FECB51A4EBFD1003F9533 /* Main.storyboard */; };
 		3A2FECC81A4EBFD1003F9533 /* TrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FECC71A4EBFD1003F9533 /* TrainingTests.swift */; };
 		3A5D9D041A56B1E900DC1D97 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D9D031A56B1E900DC1D97 /* InfoController.swift */; };
-		3A5D9D061A56B8E600DC1D97 /* ContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D9D051A56B8E600DC1D97 /* ContentController.swift */; };
 		3A5D9D141A5869D200DC1D97 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D9D131A5869D200DC1D97 /* Exercise.swift */; };
 		3A5D9D181A5869E100DC1D97 /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D9D151A5869E100DC1D97 /* String+Util.swift */; };
 		3A5D9D191A5869E100DC1D97 /* Variation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D9D161A5869E100DC1D97 /* Variation.swift */; };
@@ -61,7 +60,6 @@
 		3A2FECC61A4EBFD1003F9533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A2FECC71A4EBFD1003F9533 /* TrainingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTests.swift; sourceTree = "<group>"; };
 		3A5D9D031A56B1E900DC1D97 /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
-		3A5D9D051A56B8E600DC1D97 /* ContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentController.swift; sourceTree = "<group>"; };
 		3A5D9D131A5869D200DC1D97 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = ../../../swift/loadexercises/loadexercises/Exercise.swift; sourceTree = "<group>"; };
 		3A5D9D151A5869E100DC1D97 /* String+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Util.swift"; path = "../../../swift/loadexercises/loadexercises/String+Util.swift"; sourceTree = "<group>"; };
 		3A5D9D161A5869E100DC1D97 /* Variation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Variation.swift; path = ../../../swift/loadexercises/loadexercises/Variation.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				3A5D9D171A5869E100DC1D97 /* Variation+Crud.swift */,
 				3A2FECAE1A4EBFD1003F9533 /* AppDelegate.swift */,
 				3ADF0A941A5071CF007B5C32 /* BaseController.swift */,
-				3A5D9D051A56B8E600DC1D97 /* ContentController.swift */,
 				3A5D9D031A56B1E900DC1D97 /* InfoController.swift */,
 				3AE91FFD1A55753600F8BAB4 /* Images.xcassets */,
 				3A2FECB51A4EBFD1003F9533 /* Main.storyboard */,
@@ -277,7 +274,6 @@
 				3A5D9D141A5869D200DC1D97 /* Exercise.swift in Sources */,
 				3A1238681A5351CB0003D383 /* TrainingExercise+Crud.swift in Sources */,
 				3A1238661A5351CB0003D383 /* Exercise+Crud.swift in Sources */,
-				3A5D9D061A56B8E600DC1D97 /* ContentController.swift in Sources */,
 				3ADF0AAA1A5160C7007B5C32 /* Exercises.xcdatamodeld in Sources */,
 				3ADF0AAB1A5160C7007B5C32 /* Training.swift in Sources */,
 				3A1238401A51AD9F0003D383 /* TrainingListController.swift in Sources */,
