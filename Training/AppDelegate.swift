@@ -40,6 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("Exercises.sqlite")
         
+        println("url: \(url)")
+                
         var error: NSError? = nil
 
         if ( !NSFileManager.defaultManager().fileExistsAtPath(url.path!) ) {

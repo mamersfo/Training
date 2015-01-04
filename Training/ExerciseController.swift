@@ -8,6 +8,48 @@ class ExerciseController: ContentController {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var varsLabel: UILabel!
+    @IBOutlet weak var diagramImage: UIImageView!
+    @IBOutlet weak var linksView: UITextView!
+    
+    func variationsAsText(variations: NSOrderedSet) -> NSAttributedString {
+        
+        let mas = NSMutableAttributedString()
+        mas.appendAttributedString(NSAttributedString(string: "Varianten:\n",
+            attributes: [NSFontAttributeName : UIFont.systemFontOfSize(17.0)]))
+        
+        let attrs = [NSFontAttributeName : UIFont.systemFontOfSize(14.0)]
+
+        let bullet = NSAttributedString(string: "• ", attributes: attrs)
+        let newline = NSAttributedString(string: "\n", attributes: attrs)
+        
+        for i in 0...variations.count-1 {
+            mas.appendAttributedString(bullet)
+            let variation = variations.objectAtIndex(i) as Variation
+            let name = NSAttributedString(string: variation.name, attributes: attrs)
+            mas.appendAttributedString(name)
+            
+            if let video = variation.valueForKey("video") as? String {
+                mas.addAttribute(NSLinkAttributeName,
+                    value: "http://www.youtube.com/watch?v=\(video)",
+                    range: NSMakeRange(mas.length-name.length, name.length))
+            }
+            
+            if let comment = variation.valueForKey("comment") as? String {
+                mas.appendAttributedString(
+                    NSAttributedString(string: ", \(comment)", attributes: attrs))
+            }
+            
+            mas.appendAttributedString(newline)
+        }
+        
+        let range = NSMakeRange(0,mas.length)
+        
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 10
+        mas.addAttribute(NSParagraphStyleAttributeName, value: style, range: range)
+        
+        return mas
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,19 +61,18 @@ class ExerciseController: ContentController {
         categoryLabel.text = "Categorie: \(exercise!.category.name)"
 
         textLabel.text = exercise?.text
-        textLabel.sizeToFit()
         
-        if let vars: String = exercise?.valueForKey("variations") as String! {
-            if ( vars != "" ) {
-                let comps = vars.componentsSeparatedByString(";") as NSArray
-                varsLabel.text = "Variaties:\n• " + comps.componentsJoinedByString("\n• ")
-            }
-            else {
-                varsLabel.text = "Geen variaties."
+        if let uuid = exercise?.uuid as String! {
+            if let image = UIImage(named: uuid) {
+                diagramImage.image = image
             }
         }
-        else {
-            varsLabel.text = "Geen variaties."
+        
+        if let variations = exercise?.variations {
+            if  variations.count > 0 {
+                linksView.attributedText = variationsAsText(variations)
+                linksView.sizeToFit()
+            }
         }
     }
     
