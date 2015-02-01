@@ -41,14 +41,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("Exercises.sqlite")
         
         println("url: \(url)")
-                
+        
         var error: NSError? = nil
-
-        if ( !NSFileManager.defaultManager().fileExistsAtPath(url.path!) ) {
-            if let preloadURL = NSBundle.mainBundle().URLForResource("Exercises", withExtension: "sqlite") {
-                if (!NSFileManager.defaultManager().copyItemAtURL( preloadURL, toURL: url, error: &error)) {
-                    println("Unable to copy \(preloadURL) to \(url)")
+        
+        let fm = NSFileManager.defaultManager()
+        
+        if ( fm.fileExistsAtPath(url.path!) ) {
+            
+            if let dir = url.URLByDeletingLastPathComponent as NSURL! {
+                
+                let contents = fm.contentsOfDirectoryAtPath(dir.path!, error: &error) as [String]
+                
+                for next in contents {
+                    if next.hasPrefix("Exercises") {
+                        let nexturl = dir.URLByAppendingPathComponent(next)
+                        if (!fm.removeItemAtURL(nexturl, error: &error)) {
+                            println("Error deleting file: \(error)")
+                        }
+                    }
                 }
+            }
+        }
+
+        if let preloadURL = NSBundle.mainBundle().URLForResource("Exercises", withExtension: "sqlite") {
+            if (!fm.copyItemAtURL( preloadURL, toURL: url, error: &error)) {
+                println("Unable to copy \(preloadURL) to \(url)")
             }
         }
         

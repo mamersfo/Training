@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "coerver.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "b058c4fd-b6d6-4bf3-a3c3-c19c1f0a5bae.png"
+      "filename" : "coerver-64px.png"
     },
     {
       "idiom" : "universal",

@@ -15,9 +15,11 @@
 		3A12386A1A5351D70003D383 /* TrainingExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1238691A5351D70003D383 /* TrainingExercise.swift */; };
 		3A12386C1A5353230003D383 /* Exercises.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3A12386B1A53530A0003D383 /* Exercises.sqlite */; };
 		3A1238761A53DBD10003D383 /* ExerciseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1238751A53DBD10003D383 /* ExerciseListController.swift */; };
+		3A2AB3101A7E3A8B00F96B13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2AB30F1A7E3A8B00F96B13 /* Images.xcassets */; };
 		3A2FECAF1A4EBFD1003F9533 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FECAE1A4EBFD1003F9533 /* AppDelegate.swift */; };
 		3A2FECB71A4EBFD1003F9533 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2FECB51A4EBFD1003F9533 /* Main.storyboard */; };
 		3A2FECC81A4EBFD1003F9533 /* TrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FECC71A4EBFD1003F9533 /* TrainingTests.swift */; };
+		3A4500161A679C6700798E8E /* VariationListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4500151A679C6700798E8E /* VariationListController.swift */; };
 		3A5D9D041A56B1E900DC1D97 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D9D031A56B1E900DC1D97 /* InfoController.swift */; };
 		3A5D9D141A5869D200DC1D97 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D9D131A5869D200DC1D97 /* Exercise.swift */; };
 		3A5D9D181A5869E100DC1D97 /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D9D151A5869E100DC1D97 /* String+Util.swift */; };
@@ -28,7 +30,6 @@
 		3ADF0A951A5071CF007B5C32 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF0A941A5071CF007B5C32 /* BaseController.swift */; };
 		3ADF0AAA1A5160C7007B5C32 /* Exercises.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF0AA61A5160C7007B5C32 /* Exercises.xcdatamodeld */; };
 		3ADF0AAB1A5160C7007B5C32 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF0AA81A5160C7007B5C32 /* Training.swift */; };
-		3AE91FFE1A55753600F8BAB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AE91FFD1A55753600F8BAB4 /* Images.xcassets */; };
 		3AE920071A558CEA00F8BAB4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE920051A558CEA00F8BAB4 /* Category.swift */; };
 		3AE920081A558CEA00F8BAB4 /* Category+Crud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE920061A558CEA00F8BAB4 /* Category+Crud.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		3A1238691A5351D70003D383 /* TrainingExercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainingExercise.swift; path = ../../../swift/loadexercises/loadexercises/TrainingExercise.swift; sourceTree = "<group>"; };
 		3A12386B1A53530A0003D383 /* Exercises.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Exercises.sqlite; sourceTree = "<group>"; };
 		3A1238751A53DBD10003D383 /* ExerciseListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseListController.swift; sourceTree = "<group>"; };
+		3A2AB30F1A7E3A8B00F96B13 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3A2FECA91A4EBFD1003F9533 /* Training.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Training.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2FECAD1A4EBFD1003F9533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A2FECAE1A4EBFD1003F9533 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		3A2FECC11A4EBFD1003F9533 /* TrainingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2FECC61A4EBFD1003F9533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A2FECC71A4EBFD1003F9533 /* TrainingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTests.swift; sourceTree = "<group>"; };
+		3A4500151A679C6700798E8E /* VariationListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariationListController.swift; sourceTree = "<group>"; };
 		3A5D9D031A56B1E900DC1D97 /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
 		3A5D9D131A5869D200DC1D97 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = ../../../swift/loadexercises/loadexercises/Exercise.swift; sourceTree = "<group>"; };
 		3A5D9D151A5869E100DC1D97 /* String+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Util.swift"; path = "../../../swift/loadexercises/loadexercises/String+Util.swift"; sourceTree = "<group>"; };
@@ -69,7 +72,6 @@
 		3ADF0A941A5071CF007B5C32 /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		3ADF0AA71A5160C7007B5C32 /* loadexercises.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = loadexercises.xcdatamodel; sourceTree = "<group>"; };
 		3ADF0AA81A5160C7007B5C32 /* Training.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Training.swift; path = ../../../swift/loadexercises/loadexercises/Training.swift; sourceTree = "<group>"; };
-		3AE91FFD1A55753600F8BAB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3AE920051A558CEA00F8BAB4 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = ../../../swift/loadexercises/loadexercises/Category.swift; sourceTree = "<group>"; };
 		3AE920061A558CEA00F8BAB4 /* Category+Crud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Category+Crud.swift"; path = "../../../swift/loadexercises/loadexercises/Category+Crud.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 		3A2FECAB1A4EBFD1003F9533 /* Training */ = {
 			isa = PBXGroup;
 			children = (
+				3A2AB30F1A7E3A8B00F96B13 /* Images.xcassets */,
 				3A12386B1A53530A0003D383 /* Exercises.sqlite */,
 				3ADF0AA61A5160C7007B5C32 /* Exercises.xcdatamodeld */,
 				3A5D9D151A5869E100DC1D97 /* String+Util.swift */,
@@ -130,10 +133,10 @@
 				3A12383F1A51AD9F0003D383 /* TrainingListController.swift */,
 				3A5D9D161A5869E100DC1D97 /* Variation.swift */,
 				3A5D9D171A5869E100DC1D97 /* Variation+Crud.swift */,
+				3A4500151A679C6700798E8E /* VariationListController.swift */,
 				3A2FECAE1A4EBFD1003F9533 /* AppDelegate.swift */,
 				3ADF0A941A5071CF007B5C32 /* BaseController.swift */,
 				3A5D9D031A56B1E900DC1D97 /* InfoController.swift */,
-				3AE91FFD1A55753600F8BAB4 /* Images.xcassets */,
 				3A2FECB51A4EBFD1003F9533 /* Main.storyboard */,
 				3A2FECAC1A4EBFD1003F9533 /* Supporting Files */,
 			);
@@ -248,7 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A12386C1A5353230003D383 /* Exercises.sqlite in Resources */,
-				3AE91FFE1A55753600F8BAB4 /* Images.xcassets in Resources */,
+				3A2AB3101A7E3A8B00F96B13 /* Images.xcassets in Resources */,
 				3A2FECB71A4EBFD1003F9533 /* Main.storyboard in Resources */,
 				3A68271B1A501071006E3BFB /* TableCell.xib in Resources */,
 			);
@@ -285,6 +288,7 @@
 				3A12386A1A5351D70003D383 /* TrainingExercise.swift in Sources */,
 				3A2FECAF1A4EBFD1003F9533 /* AppDelegate.swift in Sources */,
 				3A5D9D1A1A5869E100DC1D97 /* Variation+Crud.swift in Sources */,
+				3A4500161A679C6700798E8E /* VariationListController.swift in Sources */,
 				3AE920071A558CEA00F8BAB4 /* Category.swift in Sources */,
 				3A5D9D041A56B1E900DC1D97 /* InfoController.swift in Sources */,
 			);
@@ -409,10 +413,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Training/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -420,10 +428,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Training/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
