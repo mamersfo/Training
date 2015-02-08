@@ -4,6 +4,11 @@ class VariationListController: BaseController {
     
     var variations = [Variation]()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.title = "More"
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return variations.count
     }
@@ -17,6 +22,9 @@ class VariationListController: BaseController {
         if let source = variation.valueForKey("source") as? String {
             cell.imageView?.image = UIImage(named: source)
         }
+        else {
+            cell.imageView?.image = UIImage(named: "empty")
+        }
         
         if variation.valueForKey("video") == nil {
             cell.accessoryType = UITableViewCellAccessoryType.None
@@ -26,11 +34,9 @@ class VariationListController: BaseController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let variation = variations[indexPath.row]
-        if let video = variation.valueForKey("video") as String! {
-            if let url = NSURL(string: "http://www.youtube.com/watch?v=\(video)") {
-                UIApplication.sharedApplication().openURL(url)
-            }
+        if let let variation = variations[indexPath.row] as Variation? {
+            let controller = VariationController.forVariation(variation)
+            navigationController?.pushViewController(controller, animated: true)
         }
     }
 
@@ -41,4 +47,13 @@ class VariationListController: BaseController {
         return controller
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let orientation = UIDevice.currentDevice().valueForKey("orientation") as NSNumber
+        
+        if ( orientation != UIInterfaceOrientation.Portrait.rawValue ) {
+            UIDevice.currentDevice().setValue(Int(UIInterfaceOrientation.Portrait.rawValue), forKey:"orientation")
+        }
+    }
 }

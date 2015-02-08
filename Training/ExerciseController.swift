@@ -76,9 +76,9 @@ class ExerciseController: UIViewController {
             }
         }
         
-        for e in exercise!.variations.array {
-            println("exercise: \(e.name)")
-        }
+//        for e in exercise!.variations.array {
+//            println("exercise: \(e.name)")
+//        }
         
         navigationItem.rightBarButtonItem!.enabled = exercise!.variations.count > 0
     }
@@ -107,4 +107,9 @@ class ExerciseController: UIViewController {
             navigationController?.pushViewController(controller, animated: true)
         }
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        NSNotificationCenter.defaultCenter().postNotificationName("CurrentViewController", object: self)
+    }    
 }

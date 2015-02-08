@@ -19,7 +19,8 @@ class BaseController: UITableViewController {
         tableView.registerNib(nib, forCellReuseIdentifier: "cellID")
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        NSNotificationCenter.defaultCenter().postNotificationName("CurrentViewController", object: self)
+    }
 }

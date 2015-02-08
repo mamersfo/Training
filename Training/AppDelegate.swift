@@ -5,8 +5,13 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var currentViewController: UIViewController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self, selector: "handler:", name: "CurrentViewController", object: nil)
+        
         return true
     }
 
@@ -88,5 +93,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         managedObjectContext.persistentStoreCoordinator = coordinator
         return managedObjectContext
     }()
+    
+    func handler(notification: NSNotification) {
+        if let found = notification.object as UIViewController? {
+            self.currentViewController = found
+        }
+    }
+    
+    func application(application: UIApplication,supportedInterfaceOrientationsForWindow window: UIWindow?) -> Int {
+        
+        if self.currentViewController is VariationController {
+            return Int( UIInterfaceOrientationMask.LandscapeRight.rawValue )
+        }
+        else {
+            return Int( UIInterfaceOrientationMask.Portrait.rawValue );
+        }
+    }
 }
 

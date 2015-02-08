@@ -326,10 +326,10 @@
             </objects>
             <point key="canvasLocation" x="963" y="66"/>
         </scene>
-        <!--More-->
+        <!--VariationListController-->
         <scene sceneID="ugN-S5-hHP">
             <objects>
-                <tableViewController storyboardIdentifier="VariationListController" title="More" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ata-t8-kAo" customClass="VariationListController" customModule="Training" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="VariationListController" title="VariationListController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ata-t8-kAo" customClass="VariationListController" customModule="Training" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5V8-8A-XOk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -339,10 +339,31 @@
                             <outlet property="delegate" destination="Ata-t8-kAo" id="W3o-2Q-dot"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="J9J-zk-AcR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MzB-qY-nyg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1319" y="64"/>
+        </scene>
+        <!--VariationController-->
+        <scene sceneID="1rE-GE-tWY">
+            <objects>
+                <viewController storyboardIdentifier="VariationController" title="VariationController" id="C6v-WX-Ysp" customClass="VariationController" customModule="Training" customModuleProvider="target" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="ExX-Rj-9UT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </webView>
+                    <navigationItem key="navigationItem" title="Variation" id="MrB-bq-3dd">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Mv0-8n-Hdx"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="ExX-Rj-9UT" id="DgZ-w9-k6y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1z6-40-yl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1673" y="65"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1Ey-Mq-2aT">

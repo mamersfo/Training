@@ -25,4 +25,9 @@ class ExerciseListController: UITableViewController, UITableViewDataSource {
         
         return cell
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        NSNotificationCenter.defaultCenter().postNotificationName("CurrentViewController", object: self)
+    }    
 }
