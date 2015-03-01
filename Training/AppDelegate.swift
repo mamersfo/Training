@@ -109,5 +109,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return Int( UIInterfaceOrientationMask.Portrait.rawValue );
         }
     }
+    
+    class func showErrorMessage(message: String, viewController: UIViewController) {
+        let controller = UIAlertController(title: "Error", message: message, preferredStyle: .ActionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+        }
+        controller.addAction(cancelAction)
+        viewController.presentViewController(controller, animated: true, completion: nil)
+    }
 }
 
