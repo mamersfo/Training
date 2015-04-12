@@ -2,9 +2,8 @@ import UIKit
 import CoreData
 
 class TrainingController: BaseController, UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating {
-    
-    var user: NSDictionary?
-    var training: NSDictionary?
+
+    var training: String = ""
     var exercises = [Exercise]()
     var searchController: UISearchController!
     var resultsController: ExerciseListController!
@@ -12,7 +11,7 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = training?.objectForKey("name") as? String
+        navigationItem.title = training
         
         resultsController = ExerciseListController()
         resultsController.tableView.delegate = self
@@ -31,8 +30,8 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
         
         // prevent content being visible above the search bar
         definesPresentationContext = true
-
-        if let array = self.training?.objectForKey("exercises") as? NSArray {
+        
+        if let array = Repository.read(training) as [String]? {
             let fr = NSFetchRequest(entityName: "Exercise")
             let lhs = NSExpression(forKeyPath: "uuid")
             let rhs = NSExpression(forConstantValue: array)
@@ -68,36 +67,13 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
     }
     
     func update(exercises: [Exercise]) {
-        var requestBody = Dictionary<String,AnyObject>()
-        requestBody["exercises"] = exercises.map{ ( exercise: Exercise ) -> String in
+        let uuids = exercises.map{ ( exercise: Exercise ) -> String in
             return exercise.uuid
         }
 
-        if let userId = self.user?.objectForKey("id") as? Int {
-            if let trainingId: AnyObject = self.training?.objectForKey("id") {
-                Client.putRequest(
-                    "\(Constants.baseUrl)/users/\(userId)/trainings/\(trainingId)",
-                    body: requestBody,
-                    handler: { status, responseBody -> Void in
-                        if ( status == 201 ) {
-                            self.exercises = exercises
-                            dispatch_async(dispatch_get_main_queue()) {
-                                self.tableView.reloadData()
-                            }
-                        }
-                        else {
-                            AppDelegate.showErrorMessage(responseBody?.objectForKey("message") as String,
-                                viewController: self)
-                        }
-                    })
-            }
-            else {
-                AppDelegate.showErrorMessage("Training id is undefined", viewController: self)
-            }
-        }
-        else {
-            AppDelegate.showErrorMessage("User id is undefined", viewController: self)
-        }
+        Repository.update(training, value: uuids)
+        self.exercises = exercises
+        self.tableView.reloadData()
     }
     
     func copyExercises() -> [Exercise] {
@@ -145,10 +121,9 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
         }
     }
 
-    class func forTraining(training: NSDictionary, user: NSDictionary) -> TrainingController {
+    class func forTraining(training: String) -> TrainingController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewControllerWithIdentifier("TrainingController") as TrainingController
-        controller.user = user
         controller.training = training
         return controller
     }
