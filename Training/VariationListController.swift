@@ -14,7 +14,7 @@ class VariationListController: BaseController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cellID") as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cellID") as UITableViewCell!
         
         let variation = variations[indexPath.row] as Variation!
         cell.textLabel?.text = variation.name
@@ -34,7 +34,7 @@ class VariationListController: BaseController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let let variation = variations[indexPath.row] as Variation? {
+        if let variation = variations[indexPath.row] as Variation? {
             let controller = VariationController.forVariation(variation)
             navigationController?.pushViewController(controller, animated: true)
         }
@@ -42,7 +42,7 @@ class VariationListController: BaseController {
 
     class func forVariations(variations: [Variation]) -> VariationListController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewControllerWithIdentifier("VariationListController") as VariationListController
+        let controller = storyboard.instantiateViewControllerWithIdentifier("VariationListController") as! VariationListController
         controller.variations = variations
         return controller
     }
@@ -50,7 +50,7 @@ class VariationListController: BaseController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        let orientation = UIDevice.currentDevice().valueForKey("orientation") as NSNumber
+        let orientation = UIDevice.currentDevice().valueForKey("orientation") as! NSNumber
         
         if ( orientation != UIInterfaceOrientation.Portrait.rawValue ) {
             UIDevice.currentDevice().setValue(Int(UIInterfaceOrientation.Portrait.rawValue), forKey:"orientation")

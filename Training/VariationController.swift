@@ -6,8 +6,8 @@ class VariationController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
 
     private func toURL(variation: Variation) -> NSURL? {
-        if let video = variation.valueForKey("video") as String! {
-            if let time = variation.valueForKey("time") as String! {
+        if let video = variation.valueForKey("video") as? String {
+            if let time = variation.valueForKey("time") as? String {
                 return NSURL(string: "http://www.youtube.com/watch?v=\(video)&t=\(time)")!
             }
             else {
@@ -32,13 +32,13 @@ class VariationController: UIViewController {
 
     class func forVariation(variation: Variation) -> VariationController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewControllerWithIdentifier("VariationController") as VariationController
+        let controller = storyboard.instantiateViewControllerWithIdentifier("VariationController") as! VariationController
         controller.variation = variation
         return controller
     }
     
-    override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.LandscapeRight.rawValue)
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.LandscapeRight
     }
     
     override func viewWillAppear(animated: Bool) {

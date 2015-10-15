@@ -20,7 +20,7 @@ class InfoController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        let orientation = UIDevice.currentDevice().valueForKey("orientation") as NSNumber
+        let orientation = UIDevice.currentDevice().valueForKey("orientation") as! NSNumber
         
         if ( orientation != UIInterfaceOrientation.Portrait.rawValue ) {
             UIDevice.currentDevice().setValue(Int(UIInterfaceOrientation.Portrait.rawValue), forKey:"orientation")

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "80940C2AD22C3E8B0A9ED3ED3DF105F749D585CD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "80940C2AD22C3E8B0A9ED3ED3DF105F749D585CD" : 0,
+    "EDB11A8F2CFB6C5722B1CA050B731398C2A93EAD" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4013B18A-6929-4B9F-BAC6-CEF13C829E8E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "80940C2AD22C3E8B0A9ED3ED3DF105F749D585CD" : "Training",
+    "EDB11A8F2CFB6C5722B1CA050B731398C2A93EAD" : "swift\/loadexercises"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Training",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Training.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:mamersfo\/Training.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "80940C2AD22C3E8B0A9ED3ED3DF105F749D585CD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:mamersfo\/loadexercises.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EDB11A8F2CFB6C5722B1CA050B731398C2A93EAD"
+    }
+  ]
+}

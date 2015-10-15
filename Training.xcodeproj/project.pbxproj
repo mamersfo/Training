@@ -9,29 +9,28 @@
 /* Begin PBXBuildFile section */
 		3A1238401A51AD9F0003D383 /* TrainingListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12383F1A51AD9F0003D383 /* TrainingListController.swift */; };
 		3A1238421A5288F00003D383 /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1238411A5288F00003D383 /* ExerciseController.swift */; };
-		3A1238661A5351CB0003D383 /* Exercise+Crud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1238631A5351CB0003D383 /* Exercise+Crud.swift */; };
 		3A12386C1A5353230003D383 /* Exercises.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3A12386B1A53530A0003D383 /* Exercises.sqlite */; };
 		3A1238761A53DBD10003D383 /* ExerciseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1238751A53DBD10003D383 /* ExerciseListController.swift */; };
-		3A1BAF2E1AA224BE004603AB /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BAF2D1AA224BE004603AB /* Client.swift */; };
+		3A15F7BE1AD93FF0003D406A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A15F7BD1AD93FF0003D406A /* Repository.swift */; };
+		3A15F7C11AD97BF6003D406A /* Exercises.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A15F7BF1AD97BF6003D406A /* Exercises.xcdatamodeld */; };
 		3A2AB3101A7E3A8B00F96B13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2AB30F1A7E3A8B00F96B13 /* Images.xcassets */; };
 		3A2FECAF1A4EBFD1003F9533 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FECAE1A4EBFD1003F9533 /* AppDelegate.swift */; };
 		3A2FECB71A4EBFD1003F9533 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2FECB51A4EBFD1003F9533 /* Main.storyboard */; };
 		3A2FECC81A4EBFD1003F9533 /* TrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2FECC71A4EBFD1003F9533 /* TrainingTests.swift */; };
 		3A4500161A679C6700798E8E /* VariationListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4500151A679C6700798E8E /* VariationListController.swift */; };
 		3A5D9D041A56B1E900DC1D97 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D9D031A56B1E900DC1D97 /* InfoController.swift */; };
-		3A5D9D141A5869D200DC1D97 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D9D131A5869D200DC1D97 /* Exercise.swift */; };
-		3A5D9D181A5869E100DC1D97 /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D9D151A5869E100DC1D97 /* String+Util.swift */; };
-		3A5D9D191A5869E100DC1D97 /* Variation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D9D161A5869E100DC1D97 /* Variation.swift */; };
-		3A5D9D1A1A5869E100DC1D97 /* Variation+Crud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D9D171A5869E100DC1D97 /* Variation+Crud.swift */; };
 		3A604B0A1A87760C00D75D2B /* VariationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A604B091A87760C00D75D2B /* VariationController.swift */; };
 		3A68271B1A501071006E3BFB /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A6827191A501071006E3BFB /* TableCell.xib */; };
+		3A6C4CE61AD4FDD200C8BEC0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C4CDF1AD4FDD200C8BEC0 /* Category.swift */; };
+		3A6C4CE71AD4FDD200C8BEC0 /* Category+Crud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C4CE01AD4FDD200C8BEC0 /* Category+Crud.swift */; };
+		3A6C4CE81AD4FDD200C8BEC0 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C4CE11AD4FDD200C8BEC0 /* Exercise.swift */; };
+		3A6C4CE91AD4FDD200C8BEC0 /* Exercise+Crud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C4CE21AD4FDD200C8BEC0 /* Exercise+Crud.swift */; };
+		3A6C4CEA1AD4FDD200C8BEC0 /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C4CE31AD4FDD200C8BEC0 /* String+Util.swift */; };
+		3A6C4CEB1AD4FDD200C8BEC0 /* Variation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C4CE41AD4FDD200C8BEC0 /* Variation.swift */; };
+		3A6C4CEC1AD4FDD200C8BEC0 /* Variation+Crud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C4CE51AD4FDD200C8BEC0 /* Variation+Crud.swift */; };
 		3ACC37D01AA3195E00A863FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC37CF1AA3195E00A863FD /* Constants.swift */; };
 		3ADF0A911A507149007B5C32 /* TrainingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF0A901A507149007B5C32 /* TrainingController.swift */; };
 		3ADF0A951A5071CF007B5C32 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF0A941A5071CF007B5C32 /* BaseController.swift */; };
-		3ADF0AAA1A5160C7007B5C32 /* Exercises.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF0AA61A5160C7007B5C32 /* Exercises.xcdatamodeld */; };
-		3AE920071A558CEA00F8BAB4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE920051A558CEA00F8BAB4 /* Category.swift */; };
-		3AE920081A558CEA00F8BAB4 /* Category+Crud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE920061A558CEA00F8BAB4 /* Category+Crud.swift */; };
-		3AFC92831AA1D9F700B17C2F /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC92821AA1D9F700B17C2F /* SettingsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +46,10 @@
 /* Begin PBXFileReference section */
 		3A12383F1A51AD9F0003D383 /* TrainingListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingListController.swift; sourceTree = "<group>"; };
 		3A1238411A5288F00003D383 /* ExerciseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
-		3A1238631A5351CB0003D383 /* Exercise+Crud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Exercise+Crud.swift"; path = "../../../swift/loadexercises/loadexercises/Exercise+Crud.swift"; sourceTree = "<group>"; };
 		3A12386B1A53530A0003D383 /* Exercises.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Exercises.sqlite; sourceTree = "<group>"; };
 		3A1238751A53DBD10003D383 /* ExerciseListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseListController.swift; sourceTree = "<group>"; };
-		3A1BAF2D1AA224BE004603AB /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		3A15F7BD1AD93FF0003D406A /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		3A15F7C01AD97BF6003D406A /* Exercises.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Exercises.xcdatamodel; sourceTree = "<group>"; };
 		3A2AB30F1A7E3A8B00F96B13 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3A2FECA91A4EBFD1003F9533 /* Training.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Training.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2FECAD1A4EBFD1003F9533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,19 +60,18 @@
 		3A2FECC71A4EBFD1003F9533 /* TrainingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTests.swift; sourceTree = "<group>"; };
 		3A4500151A679C6700798E8E /* VariationListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariationListController.swift; sourceTree = "<group>"; };
 		3A5D9D031A56B1E900DC1D97 /* InfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
-		3A5D9D131A5869D200DC1D97 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = ../../../swift/loadexercises/loadexercises/Exercise.swift; sourceTree = "<group>"; };
-		3A5D9D151A5869E100DC1D97 /* String+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Util.swift"; path = "../../../swift/loadexercises/loadexercises/String+Util.swift"; sourceTree = "<group>"; };
-		3A5D9D161A5869E100DC1D97 /* Variation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Variation.swift; path = ../../../swift/loadexercises/loadexercises/Variation.swift; sourceTree = "<group>"; };
-		3A5D9D171A5869E100DC1D97 /* Variation+Crud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Variation+Crud.swift"; path = "../../../swift/loadexercises/loadexercises/Variation+Crud.swift"; sourceTree = "<group>"; };
 		3A604B091A87760C00D75D2B /* VariationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariationController.swift; sourceTree = "<group>"; };
 		3A68271A1A501071006E3BFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TableCell.xib; sourceTree = "<group>"; };
+		3A6C4CDF1AD4FDD200C8BEC0 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = ../../loadexercises/loadexercises/Category.swift; sourceTree = "<group>"; };
+		3A6C4CE01AD4FDD200C8BEC0 /* Category+Crud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Category+Crud.swift"; path = "../../loadexercises/loadexercises/Category+Crud.swift"; sourceTree = "<group>"; };
+		3A6C4CE11AD4FDD200C8BEC0 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = ../../loadexercises/loadexercises/Exercise.swift; sourceTree = "<group>"; };
+		3A6C4CE21AD4FDD200C8BEC0 /* Exercise+Crud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Exercise+Crud.swift"; path = "../../loadexercises/loadexercises/Exercise+Crud.swift"; sourceTree = "<group>"; };
+		3A6C4CE31AD4FDD200C8BEC0 /* String+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Util.swift"; path = "../../loadexercises/loadexercises/String+Util.swift"; sourceTree = "<group>"; };
+		3A6C4CE41AD4FDD200C8BEC0 /* Variation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Variation.swift; path = ../../loadexercises/loadexercises/Variation.swift; sourceTree = "<group>"; };
+		3A6C4CE51AD4FDD200C8BEC0 /* Variation+Crud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Variation+Crud.swift"; path = "../../loadexercises/loadexercises/Variation+Crud.swift"; sourceTree = "<group>"; };
 		3ACC37CF1AA3195E00A863FD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3ADF0A901A507149007B5C32 /* TrainingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingController.swift; sourceTree = "<group>"; };
 		3ADF0A941A5071CF007B5C32 /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
-		3ADF0AA71A5160C7007B5C32 /* loadexercises.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = loadexercises.xcdatamodel; sourceTree = "<group>"; };
-		3AE920051A558CEA00F8BAB4 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = ../../../swift/loadexercises/loadexercises/Category.swift; sourceTree = "<group>"; };
-		3AE920061A558CEA00F8BAB4 /* Category+Crud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Category+Crud.swift"; path = "../../../swift/loadexercises/loadexercises/Category+Crud.swift"; sourceTree = "<group>"; };
-		3AFC92821AA1D9F700B17C2F /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,30 +113,29 @@
 		3A2FECAB1A4EBFD1003F9533 /* Training */ = {
 			isa = PBXGroup;
 			children = (
+				3A15F7BF1AD97BF6003D406A /* Exercises.xcdatamodeld */,
+				3A6C4CDF1AD4FDD200C8BEC0 /* Category.swift */,
+				3A6C4CE01AD4FDD200C8BEC0 /* Category+Crud.swift */,
+				3A6C4CE11AD4FDD200C8BEC0 /* Exercise.swift */,
+				3A6C4CE21AD4FDD200C8BEC0 /* Exercise+Crud.swift */,
+				3A6C4CE31AD4FDD200C8BEC0 /* String+Util.swift */,
+				3A6C4CE41AD4FDD200C8BEC0 /* Variation.swift */,
+				3A6C4CE51AD4FDD200C8BEC0 /* Variation+Crud.swift */,
 				3A2AB30F1A7E3A8B00F96B13 /* Images.xcassets */,
 				3A12386B1A53530A0003D383 /* Exercises.sqlite */,
-				3ADF0AA61A5160C7007B5C32 /* Exercises.xcdatamodeld */,
-				3A5D9D151A5869E100DC1D97 /* String+Util.swift */,
-				3AE920051A558CEA00F8BAB4 /* Category.swift */,
-				3AE920061A558CEA00F8BAB4 /* Category+Crud.swift */,
-				3A5D9D131A5869D200DC1D97 /* Exercise.swift */,
-				3A1238631A5351CB0003D383 /* Exercise+Crud.swift */,
-				3A5D9D161A5869E100DC1D97 /* Variation.swift */,
-				3A5D9D171A5869E100DC1D97 /* Variation+Crud.swift */,
 				3A2FECAE1A4EBFD1003F9533 /* AppDelegate.swift */,
 				3ADF0A941A5071CF007B5C32 /* BaseController.swift */,
 				3A1238411A5288F00003D383 /* ExerciseController.swift */,
 				3A1238751A53DBD10003D383 /* ExerciseListController.swift */,
 				3A5D9D031A56B1E900DC1D97 /* InfoController.swift */,
-				3AFC92821AA1D9F700B17C2F /* SettingsController.swift */,
 				3ADF0A901A507149007B5C32 /* TrainingController.swift */,
 				3A12383F1A51AD9F0003D383 /* TrainingListController.swift */,
 				3A604B091A87760C00D75D2B /* VariationController.swift */,
 				3A4500151A679C6700798E8E /* VariationListController.swift */,
 				3A2FECB51A4EBFD1003F9533 /* Main.storyboard */,
 				3A2FECAC1A4EBFD1003F9533 /* Supporting Files */,
-				3A1BAF2D1AA224BE004603AB /* Client.swift */,
 				3ACC37CF1AA3195E00A863FD /* Constants.swift */,
+				3A15F7BD1AD93FF0003D406A /* Repository.swift */,
 			);
 			path = Training;
 			sourceTree = "<group>";
@@ -213,7 +210,9 @@
 		3A2FECA11A4EBFD1003F9533 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Blijdorp;
 				TargetAttributes = {
 					3A2FECA81A4EBFD1003F9533 = {
@@ -273,24 +272,23 @@
 			files = (
 				3ADF0A951A5071CF007B5C32 /* BaseController.swift in Sources */,
 				3ADF0A911A507149007B5C32 /* TrainingController.swift in Sources */,
-				3A5D9D141A5869D200DC1D97 /* Exercise.swift in Sources */,
-				3A1238661A5351CB0003D383 /* Exercise+Crud.swift in Sources */,
-				3ADF0AAA1A5160C7007B5C32 /* Exercises.xcdatamodeld in Sources */,
+				3A6C4CEA1AD4FDD200C8BEC0 /* String+Util.swift in Sources */,
+				3A6C4CEB1AD4FDD200C8BEC0 /* Variation.swift in Sources */,
 				3A1238401A51AD9F0003D383 /* TrainingListController.swift in Sources */,
-				3A5D9D191A5869E100DC1D97 /* Variation.swift in Sources */,
+				3A15F7C11AD97BF6003D406A /* Exercises.xcdatamodeld in Sources */,
+				3A6C4CE91AD4FDD200C8BEC0 /* Exercise+Crud.swift in Sources */,
+				3A6C4CE71AD4FDD200C8BEC0 /* Category+Crud.swift in Sources */,
 				3A1238761A53DBD10003D383 /* ExerciseListController.swift in Sources */,
-				3AE920081A558CEA00F8BAB4 /* Category+Crud.swift in Sources */,
-				3A5D9D181A5869E100DC1D97 /* String+Util.swift in Sources */,
 				3A604B0A1A87760C00D75D2B /* VariationController.swift in Sources */,
 				3A1238421A5288F00003D383 /* ExerciseController.swift in Sources */,
-				3AFC92831AA1D9F700B17C2F /* SettingsController.swift in Sources */,
 				3A2FECAF1A4EBFD1003F9533 /* AppDelegate.swift in Sources */,
-				3A5D9D1A1A5869E100DC1D97 /* Variation+Crud.swift in Sources */,
+				3A6C4CE81AD4FDD200C8BEC0 /* Exercise.swift in Sources */,
+				3A15F7BE1AD93FF0003D406A /* Repository.swift in Sources */,
 				3A4500161A679C6700798E8E /* VariationListController.swift in Sources */,
-				3AE920071A558CEA00F8BAB4 /* Category.swift in Sources */,
 				3A5D9D041A56B1E900DC1D97 /* InfoController.swift in Sources */,
-				3A1BAF2E1AA224BE004603AB /* Client.swift in Sources */,
 				3ACC37D01AA3195E00A863FD /* Constants.swift in Sources */,
+				3A6C4CEC1AD4FDD200C8BEC0 /* Variation+Crud.swift in Sources */,
+				3A6C4CE61AD4FDD200C8BEC0 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +350,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -418,6 +417,7 @@
 				INFOPLIST_FILE = Training/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalist.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -433,6 +433,7 @@
 				INFOPLIST_FILE = Training/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.finalist.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -453,6 +454,7 @@
 				);
 				INFOPLIST_FILE = TrainingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.blijdorp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Training.app/Training";
 			};
@@ -468,6 +470,7 @@
 				);
 				INFOPLIST_FILE = TrainingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.blijdorp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Training.app/Training";
 			};
@@ -506,14 +509,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3ADF0AA61A5160C7007B5C32 /* Exercises.xcdatamodeld */ = {
+		3A15F7BF1AD97BF6003D406A /* Exercises.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3ADF0AA71A5160C7007B5C32 /* loadexercises.xcdatamodel */,
+				3A15F7C01AD97BF6003D406A /* Exercises.xcdatamodel */,
 			);
-			currentVersion = 3ADF0AA71A5160C7007B5C32 /* loadexercises.xcdatamodel */;
+			currentVersion = 3A15F7C01AD97BF6003D406A /* Exercises.xcdatamodel */;
 			name = Exercises.xcdatamodeld;
-			path = ../../../swift/loadexercises/loadexercises/Exercises.xcdatamodeld;
+			path = ../../loadexercises/loadexercises/Exercises.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

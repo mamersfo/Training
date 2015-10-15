@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     lazy var applicationDocumentsDirectory: NSURL = {
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.count-1] as NSURL
+        return urls[urls.count-1] 
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("Exercises.sqlite")
         
-        println("url: \(url)")
+        print("url: \(url)")
         
         var error: NSError? = nil
         
@@ -55,13 +55,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             if let dir = url.URLByDeletingLastPathComponent as NSURL! {
                 
-                let contents = fm.contentsOfDirectoryAtPath(dir.path!, error: &error) as [String]
+                let contents = (try! fm.contentsOfDirectoryAtPath(dir.path!)) 
                 
                 for next in contents {
                     if next.hasPrefix("Exercises") {
                         let nexturl = dir.URLByAppendingPathComponent(next)
-                        if (!fm.removeItemAtURL(nexturl, error: &error)) {
-                            println("Error deleting file: \(error)")
+                        
+                        do {
+                            try fm.removeItemAtURL(nexturl)
+                        } catch {
+                            print("Error deleting file: \(error)")
                         }
                     }
                 }
@@ -69,16 +72,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         if let preloadURL = NSBundle.mainBundle().URLForResource("Exercises", withExtension: "sqlite") {
-            if (!fm.copyItemAtURL( preloadURL, toURL: url, error: &error)) {
-                println("Unable to copy \(preloadURL) to \(url)")
+            
+            do {
+                try fm.copyItemAtURL(preloadURL, toURL: url)
+            } catch {
+                print("Unable to copy \(preloadURL) to \(url)")
             }
         }
         
-        if coordinator!.addPersistentStoreWithType(
-            NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
+        do {
+            try coordinator!.addPersistentStoreWithType(
+                        NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+        } catch var error1 as NSError {
+            error = error1
             coordinator = nil
-            println("Unresolved error \(error), \(error!.userInfo)")
+            print("Unresolved error \(error), \(error!.userInfo)")
             abort()
+        } catch {
+            fatalError()
         }
         
         return coordinator
@@ -95,18 +106,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
     
     func handler(notification: NSNotification) {
-        if let found = notification.object as UIViewController? {
+        if let found = notification.object as! UIViewController? {
             self.currentViewController = found
         }
     }
     
-    func application(application: UIApplication,supportedInterfaceOrientationsForWindow window: UIWindow?) -> Int {
+    func application(application: UIApplication,supportedInterfaceOrientationsForWindow window: UIWindow?) -> UIInterfaceOrientationMask {
         
         if self.currentViewController is VariationController {
-            return Int( UIInterfaceOrientationMask.LandscapeRight.rawValue )
+            return UIInterfaceOrientationMask.LandscapeRight
         }
         else {
-            return Int( UIInterfaceOrientationMask.Portrait.rawValue );
+            return UIInterfaceOrientationMask.Portrait;
         }
     }
     
