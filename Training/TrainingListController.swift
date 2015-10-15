@@ -11,7 +11,7 @@ class TrainingListController: BaseController, UIAlertViewDelegate {
     }
     
     @IBAction func add(sender: AnyObject) {
-        var prompt = UIAlertView(
+        let prompt = UIAlertView(
             title: "Add Training",
             message: "Please enter a name",
             delegate: self,
@@ -47,7 +47,7 @@ class TrainingListController: BaseController, UIAlertViewDelegate {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cellID") as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cellID") as UITableViewCell!
         cell.textLabel?.text = trainings[indexPath.row]
         return cell
     }

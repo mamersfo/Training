@@ -40,9 +40,14 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
                 modifier: .DirectPredicateModifier,
                 type: .InPredicateOperatorType,
                 options: .CaseInsensitivePredicateOption)
-            var error: NSError? = nil
-            if let fetchResults = self.managedObjectContext!.executeFetchRequest(fr, error: &error) as? [Exercise] {
-                self.exercises = fetchResults
+            
+            do {
+                if let fetchResults = try self.managedObjectContext!.executeFetchRequest(fr) as? [Exercise] {
+                    self.exercises = fetchResults
+                }
+            }
+            catch {
+                print(error)
             }
         }
     }
@@ -52,7 +57,7 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cellID") as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cellID") as UITableViewCell!
         
         if let exercise: Exercise = exercises[indexPath.row] as Exercise! {
             cell.textLabel?.text = exercise.name
@@ -123,7 +128,7 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
 
     class func forTraining(training: String) -> TrainingController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewControllerWithIdentifier("TrainingController") as TrainingController
+        let controller = storyboard.instantiateViewControllerWithIdentifier("TrainingController") as! TrainingController
         controller.training = training
         return controller
     }
@@ -131,7 +136,7 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         
         let whitespaceCharacterSet = NSCharacterSet.whitespaceCharacterSet()
-        let strippedString = searchController.searchBar.text.stringByTrimmingCharactersInSet(whitespaceCharacterSet)
+        let strippedString = searchController.searchBar.text!.stringByTrimmingCharactersInSet(whitespaceCharacterSet)
         let searchItems = strippedString.componentsSeparatedByString(" ") as [String]
         
         var andMatchPredicates = [NSPredicate]()
@@ -156,12 +161,12 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
                         options: .CaseInsensitivePredicateOption))
             }
             else {
-                var lhs1 = NSExpression(forKeyPath: "name")
-                var lhs2 = NSExpression(forKeyPath: "tags")
-                var rhs = NSExpression(forConstantValue: searchString)
+                let lhs1 = NSExpression(forKeyPath: "name")
+                let lhs2 = NSExpression(forKeyPath: "tags")
+                let rhs = NSExpression(forConstantValue: searchString)
                 
                 andMatchPredicates.append(
-                    NSCompoundPredicate.orPredicateWithSubpredicates([
+                    NSCompoundPredicate(orPredicateWithSubpredicates:[
                         NSComparisonPredicate(
                             leftExpression: lhs1, rightExpression: rhs,
                             modifier: .DirectPredicateModifier,
@@ -177,19 +182,21 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
             }
         }
         
-        let finalCompoundPredicate = NSCompoundPredicate.andPredicateWithSubpredicates(andMatchPredicates)
+        let finalCompoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates:andMatchPredicates)
         
         let fr = NSFetchRequest(entityName: "Exercise")
         fr.predicate = finalCompoundPredicate
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fr.sortDescriptors = [sortDescriptor]
         
-        var error: NSError? = nil
-        
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fr, error: &error) as? [Exercise] {
-            let controller = searchController.searchResultsController as ExerciseListController
-            controller.exercises = fetchResults
-            controller.tableView.reloadData()
+        do {
+            if let fetchResults = try self.managedObjectContext!.executeFetchRequest(fr) as? [Exercise] {
+                let controller = searchController.searchResultsController as! ExerciseListController
+                controller.exercises = fetchResults
+                controller.tableView.reloadData()
+            }
+        } catch {
+            print(error)
         }
     }
     

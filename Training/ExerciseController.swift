@@ -25,7 +25,7 @@ class ExerciseController: UIViewController {
         
         for i in 0...variations.count-1 {
             mas.appendAttributedString(bullet)
-            let variation = variations.objectAtIndex(i) as Variation
+            let variation = variations.objectAtIndex(i) as! Variation
             let name = NSAttributedString(string: variation.name, attributes: attrs)
             mas.appendAttributedString(name)
             
@@ -96,7 +96,7 @@ class ExerciseController: UIViewController {
     
     class func forExercise(exercise: Exercise) -> ExerciseController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewControllerWithIdentifier("ExerciseController") as ExerciseController
+        let controller = storyboard.instantiateViewControllerWithIdentifier("ExerciseController") as! ExerciseController
         controller.exercise = exercise
         return controller
     }

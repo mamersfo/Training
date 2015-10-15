@@ -1,6 +1,6 @@
 import UIKit
 
-class ExerciseListController: UITableViewController, UITableViewDataSource {
+class ExerciseListController: UITableViewController {
     
     var exercises = [Exercise]()
 
@@ -14,7 +14,7 @@ class ExerciseListController: UITableViewController, UITableViewDataSource {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell!
         let exercise = exercises[indexPath.row]
         
         cell.textLabel?.text = exercise.name

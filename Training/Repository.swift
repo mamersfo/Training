@@ -5,7 +5,7 @@ class Repository {
     class func read( key: String ) -> [String] {
         let settings = NSUserDefaults.standardUserDefaults()
         
-        if let result = settings.stringArrayForKey(key) as? [String] {
+        if let result = settings.stringArrayForKey(key) as [String]! {
             return result
         }
         
