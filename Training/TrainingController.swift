@@ -43,7 +43,17 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
             
             do {
                 if let fetchResults = try self.managedObjectContext!.executeFetchRequest(fr) as? [Exercise] {
-                    self.exercises = fetchResults
+                    
+                    // create a dictionary from the fetch results
+                    let dict = fetchResults.reduce([String:Exercise]()) { (var d, e) in
+                        d[e.uuid] = e
+                        return d
+                    }
+                    
+                    // create array of exercises using the order of the stored uuids
+                    self.exercises = array.map{ ( uuid: String ) -> Exercise in
+                        return dict[uuid]!
+                    }
                 }
             }
             catch {
@@ -72,9 +82,12 @@ class TrainingController: BaseController, UISearchBarDelegate, UISearchControlle
     }
     
     func update(exercises: [Exercise]) {
+        
         let uuids = exercises.map{ ( exercise: Exercise ) -> String in
             return exercise.uuid
         }
+        
+        print("update: \(uuids)")
 
         Repository.update(training, value: uuids)
         self.exercises = exercises

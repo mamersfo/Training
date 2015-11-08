@@ -4,12 +4,12 @@ import CoreData
 class TrainingListController: BaseController, UIAlertViewDelegate {
     var trainings = [String]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         self.trainings = Repository.read("trainings")
         self.tableView.reloadData()
     }
-    
+
     @IBAction func add(sender: AnyObject) {
         let prompt = UIAlertView(
             title: "Add Training",
